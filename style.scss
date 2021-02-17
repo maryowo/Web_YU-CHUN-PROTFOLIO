@@ -19,8 +19,12 @@ nav {
     display: grid;
     grid-template-columns: 15% auto 15%;
     text-align: center;
-    background-color: $color-gray;
+    background: $color-gray;
     padding: 30px;
+    box-shadow: $box-shawod;
+    position: fixed;
+    z-index: 3;
+    width 100%;
     color: $color-white;
 
     #link {
