@@ -4,8 +4,8 @@
   margin: 0;
   padding: 0;
   font-family: 微軟正黑體;
-  -webkit-box-shadow: border-box;
-          box-shadow: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 nav {
@@ -14,8 +14,13 @@ nav {
   -ms-grid-columns: 15% auto 15%;
       grid-template-columns: 15% auto 15%;
   text-align: center;
-  background-color: #aaa;
-  padding: 30px;
+  background: #252525;
+  padding: 35px 0;
+  -webkit-box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 3;
+  width: 100%;
   color: #f8f8f8;
 }
 
@@ -23,16 +28,17 @@ nav #link a {
   color: #f8f8f8;
   text-decoration: none;
   font-size: 16px;
-  padding: 0 60px;
+  padding: 0 50px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   display: inline-block;
+  vertical-align: 10px;
 }
 
 nav #link a:hover {
-  color: #aaa;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  color: #252525;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 nav #social a {
@@ -154,5 +160,70 @@ nav #social a img {
 #banner .banner3 h2 {
   font-size: 24px;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+}
+
+#news {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+#news #news-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+#news #news-content .news-card {
+  -webkit-box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+}
+
+#news #news-content img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#news #news-content h3 {
+  text-align: center;
+  padding: 10px;
+}
+
+#news #news-content p {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.btn {
+  background: #252525;
+  color: #f8f8f8;
+  padding: 15px 0px;
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  font-size: 18px;
+  border: 1.5px solid transparent;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  border: 1.5px solid #252525;
+  background: #aaa;
+  color: #f8f8f8;
+}
+
+.tittle-big {
+  text-align: center;
+  padding: 30px 0 30px;
+  font-size: 30px;
+  font-weight: 900;
 }
 /*# sourceMappingURL=style.css.map */

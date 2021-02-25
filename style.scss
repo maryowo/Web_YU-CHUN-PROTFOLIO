@@ -12,19 +12,19 @@ $mobile: 767px;                                     // 手機尺寸
     margin: 0;
     padding: 0;
     font-family: 微軟正黑體;
-    box-shadow: border-box;
+    box-sizing: border-box;
 }
 
 nav {
     display: grid;
     grid-template-columns: 15% auto 15%;
     text-align: center;
-    background: $color-gray;
-    padding: 30px;
+    background: $color-black;
+    padding: 35px 0;
     box-shadow: $box-shawod;
     position: fixed;
     z-index: 3;
-    width 100%;
+    width: 100%;
     color: $color-white;
 
     #link {
@@ -32,15 +32,16 @@ nav {
             color: $color-white;
             text-decoration: none;
             font-size: 16px;
-            padding: 0 60px;
+            padding: 0 50px;
             transition: 0.3s;
             display: inline-block; 
             // 行內區塊元素 不會自己一行並且可以縮放
+            vertical-align: 10px;
 
 
             &:hover {
-                color: $color-gray;
-                transform: scale(1.5);
+                color: $color-black;
+                transform: scale(1.2);
 
             }
         }
@@ -103,7 +104,7 @@ nav {
             height: 100vh;
             text-align: center;
             color: $color-white;
-
+            
     
             &:focus {
                 outline: none;
@@ -129,12 +130,16 @@ nav {
 // 最新消息
 #news {
     width: 1280px;
-    margin: 0 auto;
+    margin: 0 auto ;
 
     #news-content {
        display: grid;
-       grid-template-columns: repeat (3, 1fr);
+       grid-template-columns: repeat(3, 1fr);
        grid-gap: 20px;
+
+       .news-card {
+           box-shadow: $box-shawod
+       }
        
        img {
            width: 100%;
@@ -142,12 +147,13 @@ nav {
            object-fit: cover;
        }
 
-       h3　{
-    　　   text-align: center;
+       h3 { 
+           text-align: center;
            padding: 10px;
-    　　}
+        }
 
-       p {
+        p {
+          text-align: center;
           line-height: 1.5;
           font-size: 14px;
           padding-bottom: 10px;
@@ -156,12 +162,32 @@ nav {
     }
 }
 
+// 統一樣式
 // 按鈕樣式
 .btn {
     background: $color-black;
     color: $color-white;
-    padding: 10px 30px;
+    padding: 15px 0px;
     display: block;
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
+    font-size: 18px;
+    border: 1.5px solid transparent;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+
+    &:hover {
+        border: 1.5px solid $color-black;
+        background: $color-gray;
+        color: $color-white;
+    }
+}
+
+// 大標題樣式
+.tittle-big {
+    text-align: center;
+    padding: 30px 0 30px;
+    font-size: 30px;
+    font-weight: 900;
 }
